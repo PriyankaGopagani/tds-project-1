@@ -134,6 +134,7 @@ def process_request(data):
 
 # === Main endpoint ===
 @app.post("/api-endpoint")
+@app.post("/api-endpoint/")
 async def receive_request(request: Request, background_tasks: BackgroundTasks):
     data = await request.json()
     print("📩 Received request:", data)
